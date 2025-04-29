@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Shroomtop® Prime Access</title>
+  <style>
+    /* CSS3 */
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+      font-family: Arial, sans-serif;
+    }
+    #container {
+      text-align: center;
+      background: #fff;
+      padding: 2rem;
+      border-radius: 1rem;
+      box-shadow: 0 0.5rem 1.5rem rgba(0,0,0,0.2);
+      max-width: 20rem;
+      width: 90%;
+    }
+    h1 {
+      margin-bottom: 1rem;
+      font-size: 1.5rem;
+      color: #5a00d3;
+    }
+    p {
+      margin-bottom: 1.5rem;
+      font-size: 1rem;
+      color: #333;
+    }
+    button {
+      display: inline-block;
+      width: 100%;
+      padding: 0.75rem 1.5rem;
+      background: #5a00d3;
+      color: #fff;
+      font-size: 1.125rem;
+      border: none;
+      border-radius: 0.5rem;
+      cursor: pointer;
+      transition: background 0.3s ease, transform 0.2s ease;
+    }
+    button:hover:not(:disabled) {
+      background: #4a00b3;
+      transform: translateY(-2px);
+    }
+    button:disabled {
+      opacity: 0.6;
+      cursor: default;
+    }
+    .loader {
+      margin: 1rem auto 0;
+      width: 2rem;
+      height: 2rem;
+      border: 0.3rem solid #f3f3f3;
+      border-top: 0.3rem solid #5a00d3;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+      display: none;
+    }
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+  </style>
+</head>
+<body>
+  <div id="container">
+    <h1>Shroomtop® Prime Access</h1>
+    <p>Click below to unlock all premium GPTs and tools.</p>
+    <button id="buyButton">Buy Now – $19.99</button>
+    <div class="loader" id="loader"></div>
+  </div>
+
+  <script>
+    // JS ES6 Behavior
+    const stripeURL = 'https://buy.stripe.com/4gw03B7z6du3dmU7zo';
+    const buyBtn    = document.getElementById('buyButton');
+    const loader    = document.getElementById('loader');
+
+    buyBtn.addEventListener('click', () => {
+      buyBtn.disabled       = true;
+      loader.style.display  = 'block';
+      setTimeout(() => {
+        window.location.href = stripeURL;
+      }, 800);
+    });
+  </script>
+</body>
+</html>
