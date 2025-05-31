@@ -1,6 +1,7 @@
 ![Status](https://img.shields.io/badge/status-production-brightgreen)
 ![License](https://img.shields.io/github/license/shroomtop/Buy)
 ![Last Commit](https://img.shields.io/github/last-commit/shroomtop/Buy)
+[![Deploy](https://img.shields.io/github/actions/workflow/status/shroomtop/Buy/pages.yml?label=deploy&logo=github)](https://github.com/shroomtop/Buy/actions)
 [View Site](https://img.shields.io/badge/view-live-blue?logo=github)](https://shroomtop.github.io/Buy/)
 # Buy — One-Click Payment Page
 
